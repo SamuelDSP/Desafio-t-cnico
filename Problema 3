@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+  double faturamento_Diario[31], maior = 0, menor = 1e9, soma_Faturamento = 0, media_Faturamento;
+  int contador = 0;
+
+  for(int i = 0; i < 31; i++) {
+    printf("digite o faturamento do %d° dia do mês: \n", i + 1);
+    scanf("%lf", &faturamento_Diario[i]);
+    
+    // Atualiza o menor valor de faturamento
+    if(faturamento_Diario[i] < menor) {
+      menor = faturamento_Diario[i];
+    }
+    
+    // Atualiza o maior valor de faturamento
+    if(faturamento_Diario[i] > maior) {
+      maior = faturamento_Diario[i];
+    }
+    
+    // Soma o faturamento
+    soma_Faturamento += faturamento_Diario[i];
+  }
+
+  // Calcula a média do faturamento
+  media_Faturamento = soma_Faturamento / 31;
+
+  // Conta quantos dias o faturamento foi maior que a média
+  for(int i = 0; i < 31; i++) {
+    if(faturamento_Diario[i] > media_Faturamento) {
+      contador++;
+    }
+  }
+
+  printf("o valor de faturamento diário foi maior do que a média mensal durante %d dias\n", contador);
+  printf("o maior faturamento foi: %.2lf\n", maior);
+  printf("o menor faturamento foi: %.2lf\n", menor);
+
+  return 0;
+}
