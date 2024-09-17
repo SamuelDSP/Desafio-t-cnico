@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+char* inverter(char s1[], char s2[]){
+    int i, l;
+    for(i = 0; s1[i] != '\0'; i++);
+    for(i = i - 1, l = 0; i >= 0; i--){
+      s2[l] = s1[i];
+        l++;
+    }
+    s2[l] = '\0';
+    return s2;
+}
+
+int main() {
+    char frase[100], inversa[100];
+    printf("digite a frase que deseja inverter : \n");
+    fgets(frase, 100, stdin);
+    printf("a frase invertida é: %s", inverter(frase,inversa));
+    
+}
