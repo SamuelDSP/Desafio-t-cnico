@@ -1,2 +1,2 @@
 # Desafio-t-cnico
-Desafio técnico para estágio.
+Desafio técnico feito na linguagem C para estágio.
