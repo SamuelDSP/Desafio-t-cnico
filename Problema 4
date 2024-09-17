@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+  double SP = 67836.43 , RJ = 36678.66, MG = 29229.88, ES = 27165.48, Outros = 19849.53;
+  
+  double total = SP + RJ + MG + ES + Outros;
+  printf("a porcentagem do faturamento mensal que SP representa é de %.2lf \n", (SP*100)/total);
+  
+  printf("a porcentagem do faturamento mensal que RJ representa é de %.2lf \n", (RJ*100)/total);
+  
+  printf("a porcentagem do faturamento mensal que MG representa é de %.2lf \n", (MG*100)/total);
+  
+  printf("a porcentagem do faturamento mensal que ES representa é de %.2lf \n", (ES*100)/total);
+  
+  printf("a porcentagem do faturamento mensal que os outros estados representam é de %.2lf \n", (Outros*100)/total);
+  
+}
